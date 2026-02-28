@@ -9,7 +9,7 @@ html {
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 98%;                     /* changed from 800 pixels */
+    width: 98%;      /* changed from 800 pixels */
     max-width: 960px;
     margin: 0 auto;
     border: 3px solid #931420;
@@ -20,8 +20,11 @@ body {
 header {
 	padding: 1.5em 0 2em 0;
 	border-bottom: 3px solid #931420;
-	background-image: linear-gradient(
-	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: linear-gradient(30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items: center;
 }
 header h2 {
 	font-size: 175%;
@@ -43,6 +46,9 @@ header img {
 	margin: 0;
 	padding: 0;
 	position: relative;
+	display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
 }
 #nav_menu ul li {
     width: 20%;
@@ -162,6 +168,17 @@ footer p {
 	aside h3 a {
 		font-size: 85%;
 	}
+	main {
+        grid-template-areas: 
+        'section'
+        'aside'
+        'footer';
+        align-items: center;
+    }
+    header {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 648px) {
